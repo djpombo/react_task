@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom';
 import AtualizarTarefas from './index';
+import '@testing-library/jest-dom/extend-expect';
 
 
 describe('deve renderizar o update das tarefas sem erros', ()=>{
@@ -8,4 +9,6 @@ describe('deve renderizar o update das tarefas sem erros', ()=>{
         ReactDOM.render(<AtualizarTarefas id={1}/>, div);
         ReactDOM.unmountComponentAtNode(div);
     })
+    
+
 })

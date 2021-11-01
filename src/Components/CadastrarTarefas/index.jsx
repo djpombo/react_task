@@ -12,6 +12,7 @@ const CadastrarTarefas = ()=>{
 
     function cadastrar (e){
         
+        e.preventDefault();
         setFormValidate(true);
         setTask(e.target.value);
 
@@ -25,7 +26,7 @@ const CadastrarTarefas = ()=>{
             localStorage['tarefas'] = JSON.stringify(tarefas);
             setShowModal(true);
         }
-        e.preventDefault();
+        
     }
 
     function handleTxtTask(e){
