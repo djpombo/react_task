@@ -80,7 +80,7 @@ function ConcluirTarefa(props){
 }
 
 ConcluirTarefa.propTypes = {
-    tarefa: PropTypes.object.isRequired,
+    tarefa: PropTypes.object,
     recarregarTarefas: PropTypes.func.isRequired,
     className: PropTypes.string
 }

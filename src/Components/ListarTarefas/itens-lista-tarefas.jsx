@@ -6,11 +6,6 @@ import ConcluirTarefa from "./concluir-tarefa";
 import RemoverTarefas from "../../services/remover-tarefas";
 import './itens-lista-tarefas.css';
 
-const objetoTeste= {
-    id: 1,
-    name: 'Teste de object',
-    isConcluded: false
-}
 function ItensListaTarefas(props) {
 
     function marcarConcluida(item) {
