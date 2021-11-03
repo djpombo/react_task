@@ -14,7 +14,7 @@ function ItensListaTarefas(props) {
 
     return (
         props.tarefas.map(item => {
-            
+           
             return (
                 <tr key={item.id} data-testid="tarefa">
                     <td width="75%" data-testid="nome-tarefa"

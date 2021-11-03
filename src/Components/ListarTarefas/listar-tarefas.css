@@ -6,3 +6,9 @@
 button{
     margin-right: .2rem;
    }
+
+.paginacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
