@@ -9,7 +9,6 @@ import ItensListaTarefas from './itens-lista-tarefas';
 import Paginacao from '../../services/paginacao';
 import Order from '../../services/order';
 
-
 function ListarTarefas() {
 
     const ITENS_POR_PAG = 3;
@@ -22,7 +21,6 @@ function ListarTarefas() {
     const [orderAsc, setOrderAsc] = useState(false);
     const [orderDesc, setOrderDesc] = useState(false);
     
-
     useEffect(() => {
 
         function handleList() {
@@ -46,13 +44,10 @@ function ListarTarefas() {
             //quantos indices serão exibidos
             setList(listaTarefas.splice((paginaAtual - 1) * ITENS_POR_PAG, ITENS_POR_PAG));
 
-
-
         }
         if (loadTask) {
             handleList();
             setLoadTask(false);
-
         }
 
 
@@ -88,13 +83,12 @@ function ListarTarefas() {
     }
 
 
-
     return (
         <div className="text-center">
             <h3>React-Task</h3>
-            <Table striped bordered hover responsive data-textid='table'>
+            <Table striped bordered hover responsive data-testid='table'>
                 <thead>
-                    <tr>
+                    <tr key='be12'>
                         <th>
                             <a href="/" onClick={handleOrder}>
                                 Tarefa
@@ -104,7 +98,6 @@ function ListarTarefas() {
 
                         </th>
                         <th>
-
                             <A href='/cadastrar'
                                 className='btn btn-success btn-sm'
                                 data-textid='btnNewTask'
@@ -114,7 +107,7 @@ function ListarTarefas() {
                             </A>
                         </th>
                     </tr>
-                    <tr>
+                    <tr key='be13'>
                         <th>
                             <Form.Control
                                 type="text"

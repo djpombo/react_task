@@ -8,7 +8,7 @@ function Paginacao(props) {
             <Pagination.First
                 key="pagFirst"
                 onClick={() => props.mudarPagina(1)}
-                disabled={props.paginaAtual === 1}
+                disabled={props.paginaAtual && props.paginaAtual === 1}
             />
         )
     }
@@ -18,7 +18,7 @@ function Paginacao(props) {
             <Pagination.Prev
                 key="pagPrev"
                 onClick={() => props.mudarPagina(props.paginaAtual - 1)}
-                disabled={props.paginaAtual === 1}
+                disabled={props.paginaAtual && props.paginaAtual === 1}
             />
         );
     }
@@ -44,7 +44,7 @@ function Paginacao(props) {
             <Pagination.Next
                 key="pagNext"
                 onClick={() => props.mudarPagina(props.paginaAtual + 1)}
-                disable={props.paginaAtual === numPaginas}//quer dizer que estamos na ultima pagina
+                disable={props.paginaAtual && props.paginaAtual === numPaginas}//quer dizer que estamos na ultima pagina
             >
 
             </Pagination.Next>
@@ -56,7 +56,7 @@ function Paginacao(props) {
             <Pagination.Last
             key="pagLast"
             onClick={()=> props.mudarPagina(numPaginas)}
-            disabled={props.paginaAtual === numPaginas}
+            disabled={props.paginaAtual && props.paginaAtual === numPaginas}
             />
             
         );
